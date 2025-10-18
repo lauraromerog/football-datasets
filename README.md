@@ -357,6 +357,6 @@ Contributions to the Nodeball Football Datalake are most welcome! If you want to
 
 ---
 
-**Built with ⚽ by [salimt](https://github.com/salimt) | Last Updated: August 2025**
+**Built with ⚽ by [salimt](https://github.com/salimt)**
 
 *"Complete football datalake - no player left behind."*
