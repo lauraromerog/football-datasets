@@ -263,8 +263,6 @@ erDiagram
 
 Exploratory data analysis project using Python and SQL to investigate transfer market trends, player valuations, and career trajectories in European football.
 
-Data sourced from the [Transfermarkt open dataset](https://www.kaggle.com/datasets/davidcariboo/player-scores).
-
 ---
 
 ## Repository Structure
