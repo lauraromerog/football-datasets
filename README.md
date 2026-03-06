@@ -259,104 +259,69 @@ erDiagram
 
 ---
 
-## 📋 **Data Quality **
+# Trends & Dynamics in Football Transfers
 
-### **Data Quality Features**
-- ✅ **Deduplication**: Content hashing prevents duplicate data
-- ✅ **Incremental Updates**: Only changed data is reprocessed
-- ✅ **Error Tracking**: Failed URLs logged for monitoring
-- ✅ **Unicode Support**: Proper handling of international characters
-- ✅ **Timestamp Tracking**: All records include update timestamps
+Exploratory data analysis project using Python and SQL to investigate transfer market trends, player valuations, and career trajectories in European football.
 
-
-## 🎁 **Why Raw Data? Because Freedom Matters!**
-
-### 🔓 **Dive Into Raw Football Data**
-
-**Most datasets give you a filtered, pre-processed view.**  
-Working with raw football data lets you explore everything—from cleaning and organizing to deep analysis—giving you the opportunity to learn by doing.  
-
-### 💡 **Learn Through Practice**
-- **🎯 Explore Freely** – Investigate the data your way and discover patterns on your own  
-- **🔬 Develop Analytical Skills** – Create your own metrics, KPIs, and ways of interpreting the game  
-- **🤖 Experiment with Machine Learning** – Train models on raw features to understand player performance, tactics, and trends  
-- **📊 Spot Hidden Insights** – Learn to uncover trends that pre-processed datasets might hide  
-
-### 🚀 **Self-Learning Opportunities with Raw Data**
-
-| **Raw Data Aspect** | **How You Can Learn** |
-|:---|:---|
-| **🏗️ Build Your Own Pipeline** | Gain hands-on experience cleaning, structuring, and preparing large datasets |
-| **🔍 Deep Data Exploration** | Practice exploratory data analysis (EDA), spot anomalies, and discover patterns |
-| **⚡ Efficient Data Handling** | Learn to query, filter, and transform large datasets effectively |
-| **🎨 Visual Storytelling** | Create your own charts and visualizations to communicate insights clearly |
-| **🔗 Combine Sources** | Merge data from matches, players, and events to see the bigger picture and draw richer conclusions |
-| **📚 Learn Through Iteration** | Test different approaches, refine your methods, and see the impact of your analysis in real time |
-
+Data sourced from the [Transfermarkt open dataset](https://www.kaggle.com/datasets/davidcariboo/player-scores).
 
 ---
 
-## 💝 **Support This Project**
+## Repository Structure
 
-### 💖 **Sponsor the Datalake**
-Help maintain and expand this valuable football dataset:
+All scripts are located in `datalake/transfermarkt/`.
 
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ff69b4)](https://github.com/sponsors/salimt)
-
-**Your sponsorship helps with:**
-- 🚀 **Regular Data Updates**: Keep the dataset current
-- 🌍 **Expanded Coverage**: Add more leagues and competitions
-- 🔧 **Infrastructure Costs**: Server and storage maintenance
-- 📊 **Data Quality**: Enhanced validation and processing
-
----
-
-## 🤝 **Get In Touch**
-
-### 💡 **Working on a Cool Project?**  
-I’m always excited to collaborate on innovative football data projects. If you’ve got an idea, let’s make it happen together!  
-
-### 📬 **Contact Me**  
-- **GitHub**: [@salimt](https://github.com/salimt)  
-- **LinkedIn**: [salimt](https://www.linkedin.com/in/salim-tasan)  
-- **Issues**: Feel free to use GitHub Issues if you’ve got dataset-specific questions.
-  
----
-
-## 🌟 **Star the Repo**  
-If you find this project useful, don’t forget to drop a star ⭐ on GitHub—it really helps others discover it too!  
-
-[![GitHub stars](https://img.shields.io/github/stars/salimt/football-datasets.svg?style=social&label=Star)](https://github.com/salimt/football-datasets)
-
+| File | Description |
+|------|-------------|
+| `db_creation_sqlite3.py` | Loads all CSV files from the dataset into a local SQLite database (`transfermarkt.db`) |
+| `queries.sql` | SQL queries for all 10 analytical questions |
+| `q1_mkt_value_x_position.py` | Q1–Q3: Market value by position, trend over time, and foot preference analysis |
+| `q4_transfers_mkt_inflation.py` | Q4: Transfer market inflation — are fees growing faster than market values? |
+| `q5_q6_scout-eff.py` | Q5–Q6: Scouting efficiency — which Big 5 clubs consistently buy below or sell above market value |
+| `q7_higher_fee_x_better_performance.py` | Q7: Does a higher transfer fee translate into better performance (goals, assists, minutes)? |
+| `q8_mkt_value_x_countryofbirth.py` | Q8: Transfer fee premium by country of birth — which nationalities command the highest ratios? |
+| `q9_value_evolution.py` | Q9: How does a player's market value evolve after moving to a bigger or smaller league? |
+| `q10_international_caps_v_mkt_vale.py` | Q10: Do players with more international caps earn a higher market value? |
 
 ---
 
-## 👨‍💻 **Contributing**
+## Questions Covered
 
-Contributions to the Nodeball Football Datalake are most welcome! If you want to contribute new fields, data improvements, or processing enhancements to this dataset, the instructions are quite simple:
+**Market Value & Player Worth**
+- Which positions command the highest market values?
+- Has this shifted over the last decade?
+- Is foot preference a relevant factor?
 
-### 🎯 **How to Contribute**
+**Transfer Market Dynamics**
+- How has the transfer market inflated yearly — are fees growing faster than market values?
+- Which clubs consistently buy undervalued players?
+- Which clubs consistently sell overvalued players?
+- Does a high transfer fee actually translate into better performance?
 
-1. **Fork the repo**
-2. **Set up your local environment**
-3. **Analyze the datalake structure** in `datalake/` directory
-4. **Start modifying data processing** or creating new data extraction scripts
-5. **If it's all looking good, create a pull request** with your changes 🚀
-   
-### 📋 **Contribution Areas**
+**League & Geography Economics**
+- Which nationalities command a market value premium?
 
-- **🐛 Data Quality**: Report inconsistencies or missing data
-- **🔧 Processing Scripts**: Improve data extraction and validation
-- **📊 New Data Categories**: Add new types of football data
-- **🧹 Data Cleaning**: Help with validation and normalization
-- **📝 Documentation**: Improve dataset documentation
-
----
-
-`football-data` `soccer-dataset` `transfermarkt-data` `player-statistics` `football-analytics` `soccer-analytics` `sports-data` `football-research` `player-performance` `transfer-market` `football-database` `soccer-database` `sports-dataset` `football-datalake` `soccer-datalake`
+**Career & Value Trajectories**
+- How does a player's market value evolve after moving to a bigger or smaller league?
+- Do players with more international caps earn a higher market value?
 
 ---
 
-**Built with ⚽ by [salimt](https://github.com/salimt)**
+## Getting Started
 
-*"Complete football datalake - no player left behind."*
+1. Download the Transfermarkt dataset CSVs and place them inside `datalake/transfermarkt/`
+2. Run `db_creation_sqlite3.py` to generate the local SQLite database
+3. Run any of the `q*.py` scripts to reproduce the analysis and charts
+
+All scripts automatically set their working directory relative to their own location, so they will run correctly regardless of where the repo is cloned.
+
+**Dependencies:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `sqlite3` (built-in)
+
+---
+
+## Notes
+
+- Analysis is filtered to the **Big 5 leagues** (La Liga, Premier League, Ligue 1, Bundesliga, Serie A) where relevant
+- Goalkeepers are excluded from performance-based analyses
+- The `.db` file is not included in the repo — it is generated locally by `db_creation_sqlite3.py`
+
